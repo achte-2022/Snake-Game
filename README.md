@@ -3,11 +3,13 @@
 Tejas Acharya
 [Twitter](https://twitter.com/achte_te)
 
-Snake grows longer everytime it eats food and score gets updated. Game is over when snake hits wall(boundary) or when snake bites it's own body.
+Snake grows longer everytime it eats food and score gets updated. Game is over when snake hits wall(boundary) or when snake bites it's own body. Snake is controlled by Arrow keys.
 
 To Run:
 ```sh
-$python3 main.py
+git clone git@github.com:achte-2022/Snake-Game.git
+cd Snake-Game
+python3 main.py
 ```
 
 ### Game Screen
