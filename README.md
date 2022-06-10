@@ -7,7 +7,7 @@ Snake grows longer everytime it eats food and score gets updated. Game is over w
 
 To Run:
 ```sh
-python3 main.py
+$python3 main.py
 ```
 
 ### Game Screen
