@@ -3,9 +3,9 @@
 Tejas Acharya
 [Twitter](https://twitter.com/achte_te)
 
-## Snake grows longer everytime it eats food and score gets updated.
-## Game is over when snake hits wall(boundary).
-## Game is over when snake bites it's own body.
+### Snake grows longer everytime it eats food and score gets updated.
+### Game is over when snake hits wall(boundary).
+### Game is over when snake bites it's own body.
 
 
 ### Game Screen
