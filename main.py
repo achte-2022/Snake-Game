@@ -1,4 +1,4 @@
-#Importing Libraries
+# Importing Libraries
 from turtle import Screen
 import time
 from snake import Snake
@@ -11,14 +11,14 @@ X_MIN = -280
 Y_MIN = -280
 Y_MAX = 279
 
-#Screen Setup
+# Screen Setup
 window = Screen()
-window.setup(width=600,height=600)
-window.bgcolor('black')
-window.title('Snake Game')
+window.setup(width=600, height=600)
+window.bgcolor("black")
+window.title("Snake Game")
 window.tracer(0)
 
-#Objects Setup
+# Objects Setup
 snake = Snake()
 food = Food()
 scoreboard = ScoreBoard()
@@ -42,20 +42,28 @@ while game_is_on:
     snake.move()
 
     # Food Collision
-    if (snake.head.distance(food) < 15):
+    if snake.head.distance(food) < 15:
         food.reset_pos()
         snake.extend()
         scoreboard.update_score()
 
     # Wall Collision
-    if (snake.head.xcor() < X_MIN) or (snake.head.xcor() > X_MAX) or (snake.head.ycor() < Y_MIN) or (snake.head.ycor() > Y_MAX):
-        game_is_on = False
+    if (
+        (snake.head.xcor() < X_MIN)
+        or (snake.head.xcor() > X_MAX)
+        or (snake.head.ycor() < Y_MIN)
+        or (snake.head.ycor() > Y_MAX)
+    ):
         scoreboard.game_over()
-    
+        time.sleep(2)
+        scoreboard.game_reset()
+        snake.game_reset()
+
     # Tail Collision
     for snake_block in snake.snake_list[1:]:
-        if (snake.head.distance(snake_block) < 10):
-            game_is_on = False
+        if snake.head.distance(snake_block) < 10:
             scoreboard.game_over()
-
+            time.sleep(2)
+            scoreboard.game_reset()
+            snake.game_reset()
 window.exitonclick()
