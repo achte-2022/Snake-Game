@@ -55,7 +55,7 @@ while game_is_on:
         or (snake.head.ycor() > Y_MAX)
     ):
         scoreboard.game_over()
-        time.sleep(2)
+        time.sleep(1)
         scoreboard.game_reset()
         snake.game_reset()
 
@@ -63,7 +63,7 @@ while game_is_on:
     for snake_block in snake.snake_list[1:]:
         if snake.head.distance(snake_block) < 10:
             scoreboard.game_over()
-            time.sleep(2)
+            time.sleep(1)
             scoreboard.game_reset()
             snake.game_reset()
 window.exitonclick()
