@@ -5,7 +5,8 @@ Tejas Acharya
 
 Snake grows longer everytime it eats food and score gets updated. Game is over when snake hits wall(boundary) or when snake bites it's own body. Snake is controlled by Arrow keys.
 
-Update:
+## Update:
+
 -High Score Functionality Added.
 
 
